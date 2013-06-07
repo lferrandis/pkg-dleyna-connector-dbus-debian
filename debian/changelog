@@ -1,0 +1,5 @@
+dleyna-connector-dbus (0.1.0-1) unstable; urgency=low
+
+  * Initial release. (Closes: #710235)
+
+ -- Emanuele Aina <emanuele.aina@collabora.com>  Fri, 07 Jun 2013 14:16:28 +0200

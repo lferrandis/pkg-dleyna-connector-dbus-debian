@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with autotools_dev --parallel
+
+override_dh_strip:
+	dh_strip --dbg-package=libdleyna-connector-dbus-1.0-dbg
+
+# This is a runtime loaded module which is not installed in the dynamic linker
+# search path, without the override lintian would complain about
+# pkg-has-shlibs-control-file-but-no-actual-shared-libs
+override_dh_makeshlibs:
+	:
+
+override_dh_install:
+	dh_install --list-missing
